@@ -206,8 +206,8 @@ width: auto;
 
 @media (max-width: 350px) {
 .shop {
-width: 85%; 
-margin-left: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 }
 
@@ -578,11 +578,11 @@ margin: 0 auto;
 <body>
 <header>
 <div class="logo">
-    <img src="file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/frontpage/logo-01%20(1).png" alt="Logo">
+    <img src="frontpage/logo-01%20(1).png" alt="Logo">
 </div>
 <nav>
     <ul>
-        <li class="pocetna"><a href="frontpage.html">POČETNA</a></li>
+        <li class="pocetna"><a href="index.html">POČETNA</a></li>
         <li class="proizvodi"><a href="proizvodi.html">PROIZVODI</a></li>
         <li class="reference"><a href="reference.html">REFERENCE</a></li>
         <li class="reference"><a href="online.html">ONLINE PRODAJA</a></li>
@@ -595,10 +595,11 @@ margin: 0 auto;
     <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a></button>
 </header>
 <div class="sidebar" id="mySidebar">
-<a href="frontpage.html" class="menu-button">POČETNA</a>
+<a href="index.html" class="menu-button">POČETNA</a>
 <a href="proizvodi.html" class="menu-button">PROIZVODI</a>
 <a href="reference.html" class="menu-button">REFERENCE</a>
 <a href="kontakt.html" class="menu-button">KONTAKT</a>
+<a href="online.html" class="menu-button">ONLINE PRODAJA</a>
 </div>
 
 <script>
@@ -613,24 +614,24 @@ document.body.classList.toggle('sidebar-open');
 <div class="containercetiri">
 
 
-<div class="collage">
-<div class="row">
-    <div class="col large">
-        <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/5.jpg" alt="">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-        <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/6.jpg" alt="">
-    </div>
-    <div class="col">
-        <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/7.jpg" alt="">
-    </div>
-    <div class="col">
-        <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/8.jpg" alt="">
-    </div>
-</div>
-</div>
+    <div class="collage">
+        <div class="row">
+            <div class="col large">
+                <img src="katalog/5.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="katalog/6.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="katalog/7.jpg" alt="">
+            </div>
+            <div class="col">
+                <img src="katalog/8.jpg" alt="">
+            </div>
+        </div>
+        </div>
 
 <div class="shop" id="shop"></div>
 
@@ -639,7 +640,7 @@ document.body.classList.toggle('sidebar-open');
 
 <footer class="footer">
 <div class="aa">
-<img src="file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/footer%20i%20glarija/small.png" alt="Logo" class="aaa">
+<img src="footer i glarija/small.png" alt="Logo" class="aaa">
 <p class="aaaa" >Junior Eko Termik - d.o.o. Jelah-općina Tešanj, privatno preduzeće osnovano 2001.godine. Sve potrebne informacije možete dobiti putem kontakt informacija.</p>
 </div>
 
@@ -672,29 +673,35 @@ document.body.classList.toggle('sidebar-open');
 </div>
 
 <div class="column d">
-<p class="dd">GALERIJA</p>
-<div class="ddd">
-    <div class="dddd">
-        <img src="file:///C:/Users/sarav/Downloads/1%20(2).jpg" alt="" onclick="openLightbox(0)" style="cursor: pointer;">
+    <p class="dd">GALERIJA</p>
+     <div class="ddd">
+         <div class="dddd">
+             <img src="footer i glarija/1 (2).jpg" alt="" onclick="openLightbox(0)" style="cursor: pointer; max-width: 100%;
+             height: auto;">
 
-    </div>
-    <div class="dddd">
-        <img src="file:///C:/Users/sarav/Downloads/2%20(1).jpg" alt="" onclick="openLightbox(1)" style="cursor: pointer;">
-    </div>
-    <div class="dddd">
-       <img src="file:///C:/Users/sarav/Downloads/3.jpg" alt="" onclick="openLightbox(2)" style="cursor: pointer;">
-    </div>
-    <div class="dddd">
-       <img src="file:///C:/Users/sarav/Downloads/4.jpg" alt="" onclick="openLightbox(3)" style="cursor: pointer;">
-    </div>
-    <div class="dddd">
-       <img src="file:///C:/Users/sarav/Downloads/5.jpg" alt="" onclick="openLightbox(4)" style="cursor: pointer;">
-    </div>
-    <div class="dddd">
-        <img src="file:///C:/Users/sarav/Downloads/6.jpg" alt="" onclick="openLightbox(5)" style="cursor: pointer;">
-    </div>
-</div>
-</div>
+         </div>
+         <div class="dddd">
+             <img src="footer i glarija/2 (1).jpg" alt="" onclick="openLightbox(1)" style="cursor: pointer; max-width: 100%;
+             height: auto;">
+         </div>
+         <div class="dddd">
+            <img src="footer i glarija/33.jpg" alt="" onclick="openLightbox(2)" style="cursor: pointer;max-width: 100%;
+            height: auto;">
+         </div>
+         <div class="dddd">
+            <img src="footer i glarija/44.jpg" alt="" onclick="openLightbox(3)" style="cursor: pointer;max-width: 100%;
+            height: auto;">
+         </div>
+         <div class="dddd">
+            <img src="footer i glarija/55.jpg" alt="" onclick="openLightbox(4)" style="cursor: pointer;max-width: 100%;
+            height: auto;">
+         </div>
+         <div class="dddd">
+             <img src="footer i glarija/66.jpg" alt="" onclick="openLightbox(5)" style="cursor: pointer;max-width: 100%;
+             height: auto;">
+         </div>
+     </div>
+ </div>
 
 <div id="lightbox">
 <span id="close-button" onclick="closeLightbox()">&#10006;</span>
@@ -747,19 +754,19 @@ lightboxImage.src = images[currentImageIndex];
       id: "industrijskamreza1",
       name: "DIMENZIJE OTVORA: 80x30 <br> DEBLJINA LIMA d: 3mm <br> SIRINA REBRA s: 3mm, <br> TEZINA: 4,80m2 <br> FORMAT:1000x2000mm ",
       price: 40.03,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/5.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "industrijskamreza2",
       name: "DIMENZIJE OTVORA: 80x30 <br> DEBLJINA LIMA d: 3mm <br> SIRINA REBRA s: 6mm, <br> TEZINA: 10,02m2 <br> FORMAT:1000x2000mm ",
       price: 78.43,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/5.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "industrijskamreza3",
       name: "DIMENZIJE OTVORA: 80x30 <br> DEBLJINA LIMA d: 1,5mm <br> SIRINA REBRA s: 11mm, <br> TEZINA: 11,73m2 <br> FORMAT:1000x2000mm",
       price: 134.40,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/5.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     ];
 

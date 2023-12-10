@@ -4,19 +4,19 @@ let shopItemsData = [
     id: "mrezazagazista1",
     name: "ISTEGNUTI METALI (Mreza za Gazista) 62x20 ",
     price: 63.64,
-    img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+    img: "katalog/expanded-metal-1.jpg",
   },
   {
     id: "mrezazagazista2",
     name: "ISTEGNUTI METALI (Mreza za Gazista) 62x20 ",
     price: 107.52,
-    img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+    img: "katalog/expanded-metal-1.jpg",
   },
   {
     id: "mrezazagazista3",
     name: "ISTEGNUTI METALI (Mreza za Gazista) 62x20 ",
     price: 55.92,
-    img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+    img: "katalog/expanded-metal-1.jpg",
   },
 
 
@@ -25,19 +25,19 @@ let shopItemsData = [
       id: "dekorativnamreza1",
       name: "ISTEGNUTI METALI (Dekorativna mreza) 112x40",
       price: 25.08,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "dekorativnamreza2",
       name: "ISTEGNUTI METALI (Dekorativna mreza) 112x40",
       price: 39.19,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "dekorativnamreza3",
       name: "ISTEGNUTI METALI (Dekorativna mreza) 112x40",
       price: 76.99,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
 
 
@@ -46,19 +46,19 @@ let shopItemsData = [
       id: "industrijskamreza1",
       name: "ISTEGNUTI METALI (Industrijsk Mreza) 80x30",
       price: 40.03,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "industrijskamreza2",
       name: "ISTEGNUTI METALI (Industrijsk Mreza) 80x30",
       price: 78.43,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "industrijskamreza3",
       name: "ISTEGNUTI METALI (Industrijsk Mreza) 80x30",
       price: 134.40,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
 
 
@@ -68,19 +68,19 @@ let shopItemsData = [
       id: "sitnamreza1",
       name: "ISTEGNUTI METALI (Sitna Mreza) 28x9",
       price: 49.80,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "sitnamreza2",
       name: "ISTEGNUTI METALI (Sitna Mreza) 28x9",
       price: 57.60,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
     {
       id: "sitnamreza3",
       name: "ISTEGNUTI METALI (Sitna Mreza) 28x9",
       price: 83.52,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/expanded-metal-1.jpg",
+      img: "katalog/expanded-metal-1.jpg",
     },
 
 
@@ -90,25 +90,25 @@ let shopItemsData = [
       id: "crno1",
       name: "RESETKASTA GAZISTA 25/3 Crno",
       price: 153.49,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno2",
       name: "RESETKASTA GAZISTA 25/3 Crno",
       price: 161.43,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno3",
       name: "RESETKASTA GAZISTA 25/3 Crno",
       price: 186.84,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno4",
       name: "RESETKASTA GAZISTA 25/3 Crno",
       price: 225.54,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -117,25 +117,25 @@ let shopItemsData = [
       id: "crno5",
       name: "RESETKASTA GAZISTA 25/3 Pocincano",
       price: 186.60,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno6",
       name: "RESETKASTA GAZISTA 25/3 Pocincano",
       price: 196.26,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno7",
       name: "RESETKASTA GAZISTA 25/3 Pocincano",
       price: 227.13,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno8",
       name: "RESETKASTA GAZISTA 25/3 Pocincano",
       price: 274.23,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -143,31 +143,31 @@ let shopItemsData = [
       id: "crno9",
       name: "RESETKASTA GAZISTA 30/3 Crno",
       price: 176.24,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno10",
       name: "RESETKASTA GAZISTA 30/3 Crno",
       price: 184.18,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno11",
       name: "RESETKASTA GAZISTA 30/3 Crno",
       price: 270.69,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno12",
       name: "RESETKASTA GAZISTA 30/3 Crno",
       price: 183.92,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno13",
       name: "RESETKASTA GAZISTA 30/3 Crno",
       price: 157.59,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -176,31 +176,31 @@ let shopItemsData = [
       id: "crno14",
       name: "RESETKASTA GAZISTA 30/3 Pocincano ",
       price: 214.26,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno15",
       name: "RESETKASTA GAZISTA 30/3 Pocincano",
       price: 223.92,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno16",
       name: "RESETKASTA GAZISTA 30/3 Pocincano",
       price: 329.07,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno17",
       name: "RESETKASTA GAZISTA 30/3 Pocincano",
       price: 223.59,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno18",
       name: "RESETKASTA GAZISTA 30/3 Pocincano",
       price: 191.66,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -209,25 +209,25 @@ let shopItemsData = [
       id: "crno19",
       name: "RESETKASTA GAZISTA 40/3 Crno",
       price: 234.22,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno20",
       name: "RESETKASTA GAZISTA 40/3 Crno",
       price: 242.67,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno21",
       name: "RESETKASTA GAZISTA 40/3 Crno",
       price: 230.64,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno22",
       name: "RESETKASTA GAZISTA 40/3 Crno",
       price: 397.02,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -236,25 +236,25 @@ let shopItemsData = [
       id: "crno23",
       name: "RESETKASTA GAZISTA 40/3 Pocincano",
       price: 285.48,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno24",
       name: "RESETKASTA GAZISTA 40/3 Pocincano",
       price: 295.02,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno25",
       name: "RESETKASTA GAZISTA 40/3 Pocincano",
       price: 280.38,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
     {
       id: "crno26",
       name: "RESETKASTA GAZISTA 40/3 Pocincano",
       price: 438.76,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -263,14 +263,14 @@ let shopItemsData = [
       id: "crno27",
       name: "RESETKASTA GAZISTA 30/2 Crno ",
       price: 138.15,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
     {
       id: "crno28",
       name: "RESETKASTA GAZISTA 30/2 Pocincano ",
       price: 168.04,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
 
@@ -279,14 +279,14 @@ let shopItemsData = [
       id: "crno29",
       name: "RESETKASTA GAZISTA 30/5 Crno ",
       price: 242.22,
-      img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+      img: "katalog/frp-moulded-gratings-500x500.webp",
     },
 
     {
       id: "crno30",
     name: "RESETKASTA GAZISTA 30/5 Pocincano ",
     price: 294.50,
-    img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+    img: "katalog/frp-moulded-gratings-500x500.webp",
   },
 
 
@@ -295,14 +295,14 @@ let shopItemsData = [
     id: "crno31",
     name: "RESETKASTA GAZISTA 50/5 Crno",
     price: 147.20,
-    img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+    img: "katalog/frp-moulded-gratings-500x500.webp",
   },
 
   {
     id: "crno32",
     name: "RESETKASTA GAZISTA 50/5 Pocincano ",
   price: 178.95,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+  img: "katalog/frp-moulded-gratings-500x500.webp",
 },
 
 
@@ -312,14 +312,14 @@ let shopItemsData = [
   id: "crno33",
   name: "RESETKASTA GAZISTA 50/3 Crno",
   price: 288.68,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+  img: "katalog/frp-moulded-gratings-500x500.webp",
 },
 
 {
   id: "crno34",
   name: "RESETKASTA GAZISTA 50/3 Pocincano  ",
   price: 350.95,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/frp-moulded-gratings-500x500.webp",
+  img: "katalog/frp-moulded-gratings-500x500.webp",
 },
 
 
@@ -328,31 +328,31 @@ let shopItemsData = [
   id: "ku1",
   name: "NOSAC KLIMA UREDJAJA (12-ku ili 3,5 KW)",
   price: 9.96,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku2",
   name: "NOSAC KLIMA UREDJAJA (12-ku ili 3,5 KW)",
   price: 13.56,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku3",
   name: "NOSAC KLIMA UREDJAJA (12-ku ili 3,5 KW)",
   price: 16.20,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku4",
   name: "NOSAC KLIMA UREDJAJA (12-ku ili 3,5 KW)",
   price: 16.80,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku5",
   name: "NOSAC KLIMA UREDJAJA (12-ku ili 3,5 KW)",
   price: 22.20,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 
 
@@ -360,25 +360,25 @@ let shopItemsData = [
   id: "ku6",
   name: "NOSAC KLIMA UREDJAJA (16-ku)",
   price: 17.40,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku7",
   name: "NOSAC KLIMA UREDJAJA (16-ku)",
   price: 21.36,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku8",
   name: "NOSAC KLIMA UREDJAJA (16-ku)",
   price: 26.52,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
 {
   id: "ku9",
   name: "NOSAC KLIMA UREDJAJA (16-ku)",
   price: 35.40,
-  img: "file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/21.jpg",
+  img: "katalog/21.jpg",
 },
   ];
 

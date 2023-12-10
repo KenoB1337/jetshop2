@@ -184,7 +184,7 @@ header .menu-icon {
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            background-image: url("file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/frontpage/istockphoto-1160713618-612x612.jpg");
+            background-image: url("frontpage/istockphoto-1160713618-612x612.jpg");
             flex-grow: 1;
             width: 100%;
             background-size: cover;
@@ -241,13 +241,7 @@ header .menu-icon {
         @media (max-width: 450px) {
             .kontaktirajte{
                 height: 50px;
-            width: 140px;
-            }
-}
-@media (max-width: 350px) {
-            .kontaktirajte{
-                height: 50px;
-            width: 120px;
+            width: 180px;
             }
 }
 
@@ -454,11 +448,11 @@ header .menu-icon {
 
     <header>
         <div class="logo">
-            <img src="file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/frontpage/logo-01%20(1).png" alt="Logo">
+            <img src="frontpage/logo-01%20(1).png" alt="Logo">
         </div>
         <nav>
             <ul>
-                <li class="pocetna"><a href="frontpage.html">POČETNA</a></li>
+                <li class="pocetna"><a href="index.html">POČETNA</a></li>
                 <li class="proizvodi"><a href="proizvodi.html">PROIZVODI</a></li>
                 <li class="reference"><a href="reference.html">REFERENCE</a></li>
                 <li class="reference"><a href="online.html">ONLINE PRODAJA</a></li>
@@ -470,13 +464,13 @@ header .menu-icon {
         <button class="menu-icon" onclick="toggleSidebar()">☰
             <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a></button>
         </header>
-
-    <div class="sidebar" id="mySidebar">
-        <a href="frontpage.html" class="menu-button">POČETNA</a>
+        <div class="sidebar" id="mySidebar">
+        <a href="index.html" class="menu-button">POČETNA</a>
         <a href="proizvodi.html" class="menu-button">PROIZVODI</a>
         <a href="reference.html" class="menu-button">REFERENCE</a>
         <a href="kontakt.html" class="menu-button">KONTAKT</a>
-    </div>
+        <a href="online.html" class="menu-button">ONLINE PRODAJA</a>
+        </div>
 
     <script>
         function toggleSidebar() {
@@ -498,18 +492,18 @@ header .menu-icon {
         <div class="collage">
             <div class="row">
                 <div class="col large">
-                    <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/33.jpg" alt="">
+                    <img src="katalog/33.jpg" alt="">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/34.jpg" alt="">
+                    <img src="katalog/34.jpg" alt="">
                 </div>
                 <div class="col">
-                    <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/35.jpg" alt="">
+                    <img src="katalog/35.jpg" alt="">
                 </div>
                 <div class="col">
-                    <img src="C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/katalog/36.jpg" alt="">
+                    <img src="katalog/36.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -518,7 +512,7 @@ header .menu-icon {
 
     <footer class="footer">
         <div class="aa">
-        <img src="file:///C:/Users/sarav/OneDrive/Desktop/junior_eko_termik4%20(6)/junior%20eko%20termik/footer%20i%20glarija/small.png" alt="Logo" class="aaa">
+        <img src="footer i glarija/small.png" alt="Logo" class="aaa">
         <p class="aaaa" >Junior Eko Termik - d.o.o. Jelah-općina Tešanj, privatno preduzeće osnovano 2001.godine. Sve potrebne informacije možete dobiti putem kontakt informacija.</p>
         </div>
         
@@ -551,29 +545,35 @@ header .menu-icon {
         </div>
         
         <div class="column d">
-        <p class="dd">GALERIJA</p>
-        <div class="ddd">
-            <div class="dddd">
-                <img src="file:///C:/Users/sarav/Downloads/1%20(2).jpg" alt="" onclick="openLightbox(0)" style="cursor: pointer;">
+            <p class="dd">GALERIJA</p>
+             <div class="ddd">
+                 <div class="dddd">
+                     <img src="footer i glarija/1 (2).jpg" alt="" onclick="openLightbox(0)" style="cursor: pointer; max-width: 100%;
+                     height: auto;">
         
-            </div>
-            <div class="dddd">
-                <img src="file:///C:/Users/sarav/Downloads/2%20(1).jpg" alt="" onclick="openLightbox(1)" style="cursor: pointer;">
-            </div>
-            <div class="dddd">
-               <img src="file:///C:/Users/sarav/Downloads/3.jpg" alt="" onclick="openLightbox(2)" style="cursor: pointer;">
-            </div>
-            <div class="dddd">
-               <img src="file:///C:/Users/sarav/Downloads/4.jpg" alt="" onclick="openLightbox(3)" style="cursor: pointer;">
-            </div>
-            <div class="dddd">
-               <img src="file:///C:/Users/sarav/Downloads/5.jpg" alt="" onclick="openLightbox(4)" style="cursor: pointer;">
-            </div>
-            <div class="dddd">
-                <img src="file:///C:/Users/sarav/Downloads/6.jpg" alt="" onclick="openLightbox(5)" style="cursor: pointer;">
-            </div>
-        </div>
-        </div>
+                 </div>
+                 <div class="dddd">
+                     <img src="footer i glarija/2 (1).jpg" alt="" onclick="openLightbox(1)" style="cursor: pointer; max-width: 100%;
+                     height: auto;">
+                 </div>
+                 <div class="dddd">
+                    <img src="footer i glarija/33.jpg" alt="" onclick="openLightbox(2)" style="cursor: pointer;max-width: 100%;
+                    height: auto;">
+                 </div>
+                 <div class="dddd">
+                    <img src="footer i glarija/44.jpg" alt="" onclick="openLightbox(3)" style="cursor: pointer;max-width: 100%;
+                    height: auto;">
+                 </div>
+                 <div class="dddd">
+                    <img src="footer i glarija/55.jpg" alt="" onclick="openLightbox(4)" style="cursor: pointer;max-width: 100%;
+                    height: auto;">
+                 </div>
+                 <div class="dddd">
+                     <img src="footer i glarija/66.jpg" alt="" onclick="openLightbox(5)" style="cursor: pointer;max-width: 100%;
+                     height: auto;">
+                 </div>
+             </div>
+         </div>
         
         <div id="lightbox">
         <span id="close-button" onclick="closeLightbox()">&#10006;</span>
@@ -616,7 +616,6 @@ header .menu-icon {
         }
         </script>
         </footer>
-    
 </body>
 
 <script src="cart.js"></script>
