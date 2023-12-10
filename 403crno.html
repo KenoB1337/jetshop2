@@ -169,7 +169,17 @@ header .menu-icon {
 }
 }
 
-
+@media screen and (max-width: 350px) {
+    .cartAmount{
+        font-size: 9px;
+        top: -5px;
+        right: -7px;
+    }
+    .logo img {
+        max-width: 80%;
+        padding-left:0;
+}
+}
 
 
 
@@ -402,108 +412,117 @@ margin: 0 auto;
 
 
 
-
 .footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    background-color: #282828;
-    color: #989898;
-    padding: 80px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background-color: #282828;
+            color: #989898;
+            padding: 80px;
+        }
+        
+        @media screen and (max-width: 1180px) {
+            .footer {
+                grid-template-columns: 1fr;
+                padding: 60px;
+            }
+            .footer > div {
+                margin-bottom: 20px;
+            }
+            .footer .c {
+                margin-left: 0;
+            }
+        }
+        @media screen and (max-width: 380px) {
+        .ddd .dddd {
+            width: 60px; 
+            height: 60px; 
+        
+        }
 }
+        
+        .aaa {
+            width: 50px;
+            height: 50px;
+            
+        }
+        .aaaa {
+            width: 280px;
+            color: white;
+            color: #989898;
+            line-height: 27px;
+            margin-top: 20px;
+        }
+        
+        .bb {
+            font-size: 18px;
+            padding-bottom: 20px;
+            color: white;
+            line-height: 40px;
+        }
+        .bbb {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .bbbb {
+            flex: 1;
+        }
+        .bbbbb {
+            flex: 2;
+        }
+        .c {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 60px;
+            line-height: 35px;
+        }
+        .cc {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+            
+        }
+        .ccc {
+            background-color: transparent;
+            color: #989898;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 0;
+            border: none;
+        }
+        .ccc:hover {
+            color: #1674D1;
+        }
+        .d {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        .dd {
+            font-size: 18px;
+            padding-bottom: 20px;
+            color: white;
+        }
+        .dddd {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+        }
+        .ddd {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
 
-@media screen and (max-width: 1180px) {
-    .footer {
-        grid-template-columns: 1fr;
-        padding: 60px;
-    }
-    .footer > div {
-        margin-bottom: 20px;
-    }
-    .footer .c {
-        margin-left: 0;
-    }
-}
-@media screen and (max-width: 380px) {
-.ddd .dddd {
-    width: 60px; 
-    height: 60px; 
-
-}
-}
-.aaa {
-    width: 50px;
-    height: 50px;
-    
-}
-.aaaa {
-    width: 280px;
-    color: white;
-    color: #989898;
-    line-height: 27px;
-    margin-top: 20px;
-}
-
-.bb {
-    font-size: 18px;
-    padding-bottom: 20px;
-    color: white;
-    line-height: 40px;
-}
-.bbb {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-}
-.bbbb {
-    flex: 1;
-}
-.bbbbb {
-    flex: 2;
-}
-.c {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left: 60px;
-    line-height: 35px;
-}
-.cc {
-    font-size: 18px;
-    color: white;
-    margin-bottom: 20px;
-    
-}
-.ccc {
-    background-color: transparent;
-    color: #989898;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px 0;
-    padding: 0;
-    border: none;
-}
-.ccc:hover {
-    color: #1674D1;
-}
-.d {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-.dd {
-    font-size: 18px;
-    padding-bottom: 20px;
-    color: white;
-}
-.dddd {
-    width: 80px;
-    height: 80px;
-    margin: 5px;
-}
-.ddd {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+        @media screen and (max-width: 380px) {
+      
+        .aaaa{
+            width: 250px;
+        }
+        
 }
 #lightbox {
   display: none;
