@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+
+
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  transition: all .2s linear;
+
+}
+
+  header {
+               background-color: rgb(255, 255, 255); 
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 28px 35px;
+               
+           }
+           
+           *{
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 25px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            padding-left: 20px;
+            padding-top: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            padding-top: 20px;
+        }
+        nav ul li a:hover{
+            color: #1674D1;
+            transition: 0.3s;
+        }
+        .pocetna {
+            padding-right: 30px;
+            font-family: "Lato", sans-serif;
+        }
+
+        .proizvodi {
+            padding-right: 30px;
+            font-family: "Lato", sans-serif;
+        }
+
+        .reference {
+            padding-right: 30px;
+            font-family: "Lato", sans-serif;
+        }
+
+        .kontakti {
+            padding-right: 30px;
+            font-family: "Lato", sans-serif;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .korpa{
+            color: rgb(0, 0, 0);
+            width: 50px;
+            font-size: 30px;
+        }
+        .cartAmount{
+            font-size: 16px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            padding: 3px;
+            border-radius: 3px;
+        }
+
+      
+     
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0px;
+            height: 100%;
+            width: 250px;
+            background-color: rgb(255, 255, 255);
+            transition: left 0.5s ease;
+            z-index: 1;
+            padding-top: 10px;
+        }
+
+        .menu-icon {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #000000;
+            display: none;
+        }
+
+        .menu-icon:focus {
+            outline: none;
+        }
+
+        .menu-button {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 865px) {
+            .menu-icon {
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 20px;
+            }
+
+            .sidebar.show {
+                left: 0;
+            }
+        }
+
+       
+        
+
+    @media (max-width: 1200px) {
+header ul {
+    display: none;
+}
+header .menu-icon {
+    display: block;
+}
+.cartAmount{
+    font-size: 13px;
+    top: 28px;
+    right: 16px;
+        }
+}
+@media screen and (max-width: 865px) {
+    .cartAmount{
+        font-size: 13px;
+        top: -11px;
+        right: -9px;
+    }
+    .logo img {
+        max-width: 90%;
+        padding-left:0;
+}
+}
+
+
+
+
+          
+ 
+           .progress-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            margin: 20px auto;
+        }
+        .step {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #1674D1; 
+            border-radius: 50%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+      
+        .active {
+            background-color: #1674D1; 
+            color: white; 
+        }
+
+        .connector {
+            width: 50px;
+            height: 3px;
+            background-color: #1674D1; 
+        }
+
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #e9e9e9 60%, #d3d3d3 40.1%);
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #1674D1;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #1674D1;
+}
+
+.footer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background-color: #282828;
+            color: #989898;
+            padding: 80px;
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .footer {
+                grid-template-columns: 1fr;
+                padding: 80px;
+            }
+            .footer > div {
+                margin-bottom: 20px;
+            }
+            .footer .c {
+                margin-left: 0;
+            }
+        }
+        @media screen and (max-width: 380px) {
+        .ddd .dddd {
+            width: 60px; 
+            height: 60px; 
+        
+        }
+}
+        
+        .aaa {
+            width: 50px;
+            height: 50px;
+            margin-top: 20px;
+            
+        }
+        .aaaa {
+            width: 280px;
+            color: white;
+            color: #989898;
+        }
+        .bb {
+            font-size: 18px;
+            padding-bottom: 20px;
+            color: white;
+        }
+        .bbb {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .bbbb {
+            flex: 1;
+        }
+        .bbbbb {
+            flex: 2;
+        }
+        .c {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 30px;
+        }
+        .cc {
+            font-size: 18px;
+            padding-bottom: 20px;
+            color: white;
+        }
+        .ccc {
+            background-color: transparent;
+            color: #989898;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 0;
+            border: none;
+        }
+        .ccc:hover {
+            color: #1674D1;
+        }
+        .d {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        .dd {
+            font-size: 18px;
+            padding-bottom: 20px;
+            color: white;
+        }
+        .dddd {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+        }
+        .ddd {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+
+        .options {
+    display: flex;
+    flex-direction: column; /* Display in a column */
+  }
+
+  .option-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #007bff; /* Color of the dot */
+    margin-right: 5px;
+    display: none; /* Initially hidden */
+  }
+
+  input[type="radio"]:checked + .option-label .dot {
+    display: block; /* Show the dot when the radio button is checked */
+  }
+  .progress-container a {
+        text-decoration: none;
+    }
+    @media (max-width: 550px) {
+    .progress-container{
+        width: 300px ;
+    }
+}
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="file:///C:/Users/sarav/OneDrive/Desktop/junior%20eko%20termik/frontpage/logo-01%20(1).png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="pocetna"><a href="frontpage.html">POČETNA</a></li>
+                <li class="proizvodi"><a href="proizvodi.html">PROIZVODI</a></li>
+                <li class="reference"><a href="reference.html">REFERENCE</a></li>
+                <li class="reference"><a href="online.html">ONLINE PRODAJA</a></li>
+                <li class="kontakti"><a href="kontakt.html">KONTAKT</a></li>
+                <a href="cart.html"  class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a>
+            </ul>
+        </nav>
+        <button class="menu-icon" onclick="toggleSidebar()">☰</button>
+    </header>
+    
+    <div class="sidebar" id="mySidebar">
+        <a href="frontpage.html" class="menu-button">POČETNA</a>
+        <a href="proizvodi.html" class="menu-button">PROIZVODI</a>
+        <a href="reference.html" class="menu-button">REFERENCE</a>
+        <a href="kontakt.html" class="menu-button">KONTAKT</a>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('mySidebar');
+            sidebar.classList.toggle('show');
+            document.body.classList.toggle('sidebar-open');
+        }
+    </script>
+
+<div class="half">
+    <div class="progress-container">
+        <a href="placanje1.html"><div class="step active">1</div></a>
+        <div class="connector"></div>
+        <a href="placanje2.html"><div class="step active">2</div></a>
+        <div class="connector"></div>
+        <a href=""><div class="step">3</div></a>
+        <div class="connector"></div>
+        <a href=""><div class="step">4</div></a>
+    </div>
+</div>
+
+
+
+<div class="container">
+
+    <form action="placanje3.html">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 style="margin-bottom: 30px;" class="title">Isporuka: </h3>
+
+                <h4 style="margin-bottom: 45px;">Odaberite vrstu isporuke:</h4>
+
+                <div style="margin-bottom: 60px;" class="options">
+                    <label style="margin-bottom: 30px;" class="option-label">
+                      <input  type="radio" name="option" value="Option 1">
+                      <span  class="dot"></span> Preuzece u Junior Eko Termik (besplatno)
+                    </label>
+                    
+                    <label class="option-label">
+                      <input type="radio" name="option" value="Option 2">
+                      <span class="dot"></span> LegerMax + 10KM
+                    </label>
+                  </div>
+
+            </div>
+
+        </div>
+
+        
+        <a href="placanje2.html"><button type="submit" value="Nastavite" class="submit-btn">Nastavite</button></a>
+       
+        
+
+    </form>
+
+</div>   
+
+<footer class="footer">
+    <div class="aa">
+        <img src="file:///C:/Users/sarav/OneDrive/Desktop/junior%20eko%20termik/footer%20i%20glarija/small.png" alt="Logo" class="aaa">
+        <p class="aaaa" >Junior Eko Termik - d.o.o. Jelah-općina Tešanj, privatno preduzeće osnovano 2001.godine. Sve potrebne informacije možete dobiti putem kontakt informacija.</p>
+    </div>
+  
+    <div class="b">
+        <p class="bb">KONTAKTI</p>
+        <div class="bbb">
+            <div class="bbbb"><i class="bi bi-telephone"></i></div>
+            <div class="bbbbb">032/663-064</div>
+        </div>
+        <div class="bbb">
+            <div class="bbbb"><i class="bi bi-envelope-open"></i></div>
+            <div class="bbbbb">jet@bih.net.ba</div>
+        </div>
+        <div class="bbb">
+            <div class="bbbb"><i class="bi bi-geo-alt-fill"></i></div>
+            <div class="bbbbb">Vukovo 172 Jelah 74264 Tešanj</div>
+        </div>
+        <div class="bbb">
+            <div class="bbbb"><i class="bi bi-telephone-x"></i></div>
+            <div class="bbbbb">032/663-064</div>
+        </div>
+    </div>
+  
+    <div class="c">
+        <p class="cc">SITE MAPA</p>
+        <a href="frontpage.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Početna</button></a>
+        <a href="proizvodi.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Proizvodi</button></a>
+        <a href="reference.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Reference</button></a>
+        <a href="kontakt.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Kontakt</button></a>
+    </div>
+  
+    <div class="column d">
+        <p class="dd">GALERIJA</p>
+         <div class="ddd">
+             <div class="dddd">
+                 <a href="galerija.html"><img src="file:///C:/Users/sarav/Downloads/1%20(2).jpg" alt=""></a>
+             </div>
+             <div class="dddd">
+                 <a href="galerija.html"><img src="file:///C:/Users/sarav/Downloads/2%20(1).jpg" alt=""></a>
+             </div>
+             <div class="dddd">
+                 <a href="galerija.html"><img src="file:///C:/Users/sarav/Downloads/3.jpg" alt=""></a>
+             </div>
+             <div class="dddd">
+                 <a href="galerija.html"><img src="file:///C:/Users/sarav/Downloads/4.jpg" alt=""></a>
+             </div>
+             <div class="dddd">
+                <a href="galerija.html"><img src="file:///C:/Users/sarav/Downloads/5.jpg" alt=""></a>
+             </div>
+             <div class="dddd">
+                 <a href="galerija.html"><img src="file:///C:/Users/sarav/Downloads/6.jpg" alt=""></a>
+             </div>
+         </div>
+     </div>
+  </footer>
+    
+</body>
+<script src="cart.js"></script>
+</html>
