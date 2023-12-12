@@ -48,7 +48,7 @@ return (shop.innerHTML =  `
 <div class="opiss">
 ${opis}
 </div>
-<div style="cursor: pointer;" class="opisss">Vise o proizvodu</div>
+<div style="cursor: pointer;" class="opisss">${vise}</div>
 </div>
 <button style="cursor: pointer;" onclick="addToCart()" class="addtocart">Dodajte u Kosaricu</button>
 

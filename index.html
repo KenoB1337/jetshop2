@@ -20,7 +20,7 @@
         }
 
         .logo img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             padding-left: 20px;
             padding-top: 15px;
@@ -67,20 +67,20 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
             font-size: 16px;
         }
 
         .korpa{
-            color: white;
+            color: rgb(255, 255, 255);
             width: 50px;
             font-size: 30px;
         }
         .cartAmount{
             font-size: 16px;
             background-color: rgb(255, 255, 255);
-            color: black;
+            color: rgb(0, 0, 0);
             position: absolute;
             top: 35px;
             right: 35px;
@@ -96,7 +96,7 @@
             top: 0px;
             height: 100%;
             width: 250px;
-            background-color: rgb(10, 10, 10);
+            background-color: rgb(0, 0, 0);
             transition: left 0.5s ease;
             z-index: 1;
             padding-top: 10px;
@@ -107,7 +107,7 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: #fff;
+            color: #ffffff;
             display: none;
         }
 
@@ -118,61 +118,44 @@
         .menu-button {
             display: block;
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             padding: 15px;
             font-weight: bold;
         }
 
-        @media screen and (max-width: 865px) {
+        @media screen and (max-width: 1200px) {
             .menu-icon {
                 display: block;
                 position: absolute;
-                top: 40px;
-                right: 20px;
+               right: 90px;
+               top: 47px;
             }
 
             .sidebar.show {
                 left: 0;
             }
+       
+
         }
 
-       
-        
+        @media screen and (max-width: 865px) {
+    
+    .logo img {
+        max-width: 80%;
+        padding-left:0;
+}
+.cartAmount{
+    font-size: 14px;
+}
+}  
 
     @media (max-width: 1200px) {
-header ul {
+header li {
     display: none;
 }
 header .menu-icon {
     display: block;
-}
-.cartAmount{
-    font-size: 13px;
-    top: 28px;
-    right: 16px;
-        }
-}
-@media screen and (max-width: 865px) {
-    .cartAmount{
-        font-size: 13px;
-        top: -11px;
-        right: -9px;
-    }
-    .logo img {
-        max-width: 90%;
-        padding-left:0;
-}
-}
 
-@media screen and (max-width: 350px) {
-    .cartAmount{
-        font-size: 9px;
-        top: -5px;
-        right: -7px;
-    }
-    .logo img {
-        max-width: 80%;
-        padding-left:0;
 }
 }
 
@@ -185,6 +168,8 @@ header .menu-icon {
             text-align: center;
             color: #fff;
             background-image: url("frontpage/Lundy-Projects-Rail-Design-Manufacturing-02HH.jpg");
+            position: relative;
+            
         }
         
         @media screen and (max-width: 350px) {
@@ -318,6 +303,7 @@ header .menu-icon {
             width: 100%;
             background-size: cover;
             background-position: center; 
+            position: relative;
         }
         .second {
             flex: 1; 
@@ -354,7 +340,7 @@ header .menu-icon {
 
         .small-flag {
         position: absolute;
-        top: 172%; 
+        top: 58%; 
         left: 50%; 
         transform: translate(-110%, -50%);
         z-index: 1; 
@@ -895,7 +881,7 @@ header .menu-icon {
 <body>
     <header>
         <div class="logo">
-            <img src="frontpage/logo-01%20(1).png" alt="Logo">
+            <a href="index.html"><img src="frontpage/logo-01%20(1).png" alt="Logo"></a>
         </div>
         <nav>
             <ul>
@@ -904,12 +890,11 @@ header .menu-icon {
                 <li class="reference"><a href="reference.html">REFERENCE</a></li>
                 <li class="reference"><a href="online.html">ONLINE PRODAJA</a></li>
                 <li class="kontakti"><a href="kontakt.html">KONTAKT</a></li>
-                <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a>
+                <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </a>
                 
             </ul>
         </nav>
-        <button class="menu-icon" onclick="toggleSidebar()">☰
-            <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a></button>
+        <button class="menu-icon" onclick="toggleSidebar()">☰</button>
         </header>
         <div class="sidebar" id="mySidebar">
         <a href="index.html" class="menu-button">POČETNA</a>
@@ -919,20 +904,38 @@ header .menu-icon {
         <a href="online.html" class="menu-button">ONLINE PRODAJA</a>
         </div>
 
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById('mySidebar');
-            sidebar.classList.toggle('show');
-            document.body.classList.toggle('sidebar-open');
-        }
-    </script>
+        <script>
+            function toggleSidebar() {
+                var sidebar = document.getElementById('mySidebar');
+                sidebar.classList.toggle('show');
+                document.body.classList.toggle('sidebar-open');
+            }
+            function closeSidebar() {
+                var sidebar = document.getElementById('mySidebar');
+                sidebar.classList.remove('show');
+                document.body.classList.remove('sidebar-open');
+            }
+            document.addEventListener('click', function(event) {
+                var sidebar = document.getElementById('mySidebar');
+        
+                if (!sidebar.contains(event.target)) {
+                    closeSidebar();
+                }
+            });
+            document.getElementById('mySidebar').addEventListener('click', function(event){
+                event.stopPropagation();
+            });
+            document.querySelector('.menu-icon').addEventListener('click', function(event){
+                event.stopPropagation();
+            });
+        </script>
 
 
 
 
 <div class="containerjedan">
     <div class="first">
-        <div class="text">JUNIOR-EKO-TERMIK</div>
+        <div class="text">JUNIOR EKO TERMIK</div>
         <div class="textt">Vaš najbolji izbor za preradu metala</div>
         <div class="texttt">JET d.o.o, fabrika za proizvodnju, preradu metala i dijelova od metala Jelah općina Tešanj, privatno preduzeće osnovano 2001.godine</div>
         <div class="first_a">
@@ -941,8 +944,52 @@ header .menu-icon {
         </div>
     </div>
 </div>
-  
-  
+
+
+    <div class="k">
+        <div class="l">
+            <h1 style="margin-bottom: 15px;" class="m">O NAMA</h1>
+            <h3 class="n">Ručna izrada vrhunske kvalitete</h3>
+        </div>
+        <div class="r">
+            <div class="ro">
+                <div class="co">
+                    <img class="pic" src="frontpage/377357165_268489232776487_7762141886463050362_n.jpg" alt="Image 1">
+                    <h4 style="margin-bottom: 15px; margin-top: 25px;" class="y">Vizija</h4>
+                    <P class="y">"Postati lider u preradi metala, nudeci vrhunskokvalitetne proizvode i usluge."</P>
+                </div>
+                <div class="co">
+                    <img class="pic" src="frontpage/377241640_893726042317824_1147371399841403484_n.jpg" alt="Image 2">
+                    <h4 style="margin-bottom: 15px; margin-top: 25px;" class="y">Misija</h4>
+                    <p class="y">"Zadovoljiti potrebe klijenata pružanjem visokokvalitetnih proizvoda, inovacijama i
+                        održivošću, uz brigu o zaposlenicima i
+                        zajednici."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerpet">
+        <div class="fifth">
+            <h1 class="resetkasta">REŠETKASTA GAZIŠTA</h1>
+            <p class="sastoje">Stastoje se od nosećih, veznih i opšivnih flahova koji se međusobno uklapaju. Jednostavo se montiraju i demontiraju, jaka su i čvrsta. Gazišta se proizvode po zahtjevu kupca.</p>
+            <a href="kontakt.html"><button class="kontaktirajtedva">KONTAKTIRAJTE NAS</button></a>
+        </div>
+        <div class="resetka">
+            <img class="resetkaslika" src="frontpage/w.jpg" alt="Flag">
+        </div>
+    </div>
+
+    <div class="containercetiri">
+        <div class="fourth">
+            <h1 class="istegnuti">ISTEGNUTI METALI</h1>
+            <p class="poluproizvod">Poluproizvod u pločama ili trakama izrađen od kvalitetnih metala</p>
+            <a href="kontakt.html"><button class="kontaktirajte">KONTAKTIRAJTE NAS</button></a>
+        </div>
+        <div class="zica">
+            <img class="zicaslika" src="frontpage/toolxox-com-overlayed-image.png" alt="Flag">
+        </div>
+    </div>
 
 
     <div class="containerdva">
@@ -957,56 +1004,6 @@ header .menu-icon {
             <img src="frontpage/imgonline-com-ua-resize-8SlswnLJwJ.png" alt="Small Flag">
         </div>
     </div>
-
-
-    <div class="k">
-        <div class="l">
-            <h1 style="margin-bottom: 15px;" class="m">O NAMA</h1>
-            <h3 class="n">Ručna izrada vrhunske kvalitete</h3>
-        </div>
-        <div class="r">
-            <div class="ro">
-                <div class="co">
-                    <img class="pic" src="frontpage/377357165_268489232776487_7762141886463050362_n.jpg" alt="Image 1">
-                    <h4 style="margin-bottom: 15px; margin-top: 25px;" class="y">Vizija</h4>
-                    <P class="y">"Postati globalni lider u preradi metala, nudeci vrhunskokvalitetne proizvode i usluge."</P>
-                </div>
-                <div class="co">
-                    <img class="pic" src="frontpage/377241640_893726042317824_1147371399841403484_n.jpg" alt="Image 2">
-                    <h4 style="margin-bottom: 15px; margin-top: 25px;" class="y">Misija</h4>
-                    <p class="y">"Zadovoljiti potrebe klijenata pružanjem visokokvalitetnih metala, inovacijama i
-                        održivošću, uz brigu o zaposlenicima i
-                        zajednici."</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="containercetiri">
-        <div class="fourth">
-            <h1 class="istegnuti">ISTEGNUTI METALI</h1>
-            <p class="poluproizvod">Poluproizvod u pločama ili trakama izrađen od kvalitetnih metala</p>
-            <a href="kontakt.html"><button class="kontaktirajte">KONTAKTIRAJTE NAS</button></a>
-        </div>
-        <div class="zica">
-            <img class="zicaslika" src="frontpage/toolxox-com-overlayed-image.png" alt="Flag">
-        </div>
-    </div>
-
-
-
-    <div class="containerpet">
-        <div class="fifth">
-            <h1 class="resetkasta">REŠETKASTA GAZIŠTA</h1>
-            <p class="sastoje">Stastoje se od nosećih, veznih i opšivnih flahova koji se međusobno uklapaju i spajaju varenjem. Jednostavo se montiraju i demontiraju, jaka su i čvrsta. Gazišta se proizvode po zahtjevu kupca.</p>
-            <a href="kontakt.html"><button class="kontaktirajtedva">KONTAKTIRAJTE NAS</button></a>
-        </div>
-        <div class="resetka">
-            <img class="resetkaslika" src="frontpage/w.jpg" alt="Flag">
-        </div>
-    </div>
-
 
     <div class="containersest">
         <div class="sixth">
@@ -1051,7 +1048,7 @@ header .menu-icon {
             <a href="proizvodi.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Proizvodi</button></a>
             <a href="reference.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Reference</button></a>
             <a href="kontakt.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Kontakt</button></a>
-        </div>
+            </div>
 
         <div class="column d">
            <p class="dd">GALERIJA</p>

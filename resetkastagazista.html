@@ -22,7 +22,7 @@
         }
 
         .logo img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             padding-left: 20px;
             padding-top: 15px;
@@ -125,56 +125,39 @@
             font-weight: bold;
         }
 
-        @media screen and (max-width: 865px) {
+        @media screen and (max-width: 1200px) {
             .menu-icon {
                 display: block;
                 position: absolute;
-                top: 40px;
-                right: 20px;
+               right: 90px;
+               top: 47px;
             }
 
             .sidebar.show {
                 left: 0;
             }
+       
+
         }
 
-       
-        
+        @media screen and (max-width: 865px) {
+    
+    .logo img {
+        max-width: 80%;
+        padding-left:0;
+}
+.cartAmount{
+    font-size: 14px;
+}
+}  
 
     @media (max-width: 1200px) {
-header ul {
+header li {
     display: none;
 }
 header .menu-icon {
     display: block;
-}
-.cartAmount{
-    font-size: 13px;
-    top: 28px;
-    right: 16px;
-        }
-}
-@media screen and (max-width: 865px) {
-    .cartAmount{
-        font-size: 13px;
-        top: -11px;
-        right: -9px;
-    }
-    .logo img {
-        max-width: 90%;
-        padding-left:0;
-}
-}
 
-@media screen and (max-width: 350px) {
-    .cartAmount{
-        font-size: 9px;
-        top: -5px;
-        right: -7px;
-    }
-    .logo img {
-        max-width: 80%;
-        padding-left:0;
 }
 }
 
@@ -440,7 +423,45 @@ header .menu-icon {
     #next {
         right: 10px;
     }
-
+    #lightboxx {
+  display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+#lightboxx img {
+    max-width: 90%;
+    max-height: 80%;
+    display: block;
+}
+#close-buttonn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+#prevv, #nextt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+}
+#prevv {
+    left: 10px;
+}
+#nextt {
+    right: 10px;
+}
     </style>
 </head>
 <body>
@@ -449,7 +470,7 @@ header .menu-icon {
 
     <header>
         <div class="logo">
-            <img src="frontpage/logo-01%20(1).png" alt="Logo">
+            <a href="index.html"><img src="frontpage/logo-01%20(1).png" alt="Logo"></a>
         </div>
         <nav>
             <ul>
@@ -458,12 +479,11 @@ header .menu-icon {
                 <li class="reference"><a href="reference.html">REFERENCE</a></li>
                 <li class="reference"><a href="online.html">ONLINE PRODAJA</a></li>
                 <li class="kontakti"><a href="kontakt.html">KONTAKT</a></li>
-                <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a>
+                <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </a>
                 
             </ul>
         </nav>
-        <button class="menu-icon" onclick="toggleSidebar()">☰
-            <a href="cart.html" class="korpa"><i class="bi bi-cart2"></i> <div id="cartAmount" class="cartAmount">0</div> </li></a></button>
+        <button class="menu-icon" onclick="toggleSidebar()">☰</button>
         </header>
         <div class="sidebar" id="mySidebar">
         <a href="index.html" class="menu-button">POČETNA</a>
@@ -473,13 +493,31 @@ header .menu-icon {
         <a href="online.html" class="menu-button">ONLINE PRODAJA</a>
         </div>
 
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById('mySidebar');
-            sidebar.classList.toggle('show');
-            document.body.classList.toggle('sidebar-open');
-        }
-    </script>
+        <script>
+            function toggleSidebar() {
+                var sidebar = document.getElementById('mySidebar');
+                sidebar.classList.toggle('show');
+                document.body.classList.toggle('sidebar-open');
+            }
+            function closeSidebar() {
+                var sidebar = document.getElementById('mySidebar');
+                sidebar.classList.remove('show');
+                document.body.classList.remove('sidebar-open');
+            }
+            document.addEventListener('click', function(event) {
+                var sidebar = document.getElementById('mySidebar');
+        
+                if (!sidebar.contains(event.target)) {
+                    closeSidebar();
+                }
+            });
+            document.getElementById('mySidebar').addEventListener('click', function(event){
+                event.stopPropagation();
+            });
+            document.querySelector('.menu-icon').addEventListener('click', function(event){
+                event.stopPropagation();
+            });
+        </script>
 
 
     <div class="containercetiri">
@@ -503,21 +541,60 @@ header .menu-icon {
         <div class="collage">
             <div class="row">
                 <div class="col large">
-                    <img src="katalog/1.jpg" alt="">
+                    <img src="katalog/1.jpg" alt="Image 21" onclick="openCollageLightbox(0)" style="cursor: pointer;">
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="katalog/2.jpg" alt="">
+                    <img src="katalog/2.jpg" alt="Image 22" onclick="openCollageLightbox(1)" style="cursor: pointer;">
                 </div>
                 <div class="col">
-                    <img src="katalog/3.jpg" alt="">
+                    <img src="katalog/3.jpg" alt="Image 23" onclick="openCollageLightbox(2)" style="cursor: pointer;">
                 </div>
                 <div class="col">
-                    <img src="katalog/4.jpg" alt="">
+                    <img src="katalog/4.jpg" alt="Image 24" onclick="openCollageLightbox(3)" style="cursor: pointer;">
                 </div>
             </div>
         </div>
+        
+        <div id="lightboxx">
+            <span id="close-buttonn" onclick="closeCollageLightbox()">&#10006;</span>
+            <span id="prevv" onclick="changeCollageImage(-1)">&#10094;</span>
+            <img id="lightbox-imagee" src="" alt="">
+            <span id="nextt" onclick="changeCollageImage(1)">&#10095;</span>
+            </div>
+            
+            <script>
+              let currentCollageImageIndex = 0;
+            const Collageimages = [
+            "katalog/1.jpg",
+            "katalog/2.jpg",
+            "katalog/3.jpg",
+            "katalog/4.jpg"
+            ];
+            const Collagelightbox = document.getElementById("lightboxx");
+            const CollagelightboxImage = document.getElementById("lightbox-imagee");
+            
+            function openCollageLightbox(index) {
+            currentCollageImageIndex = index;
+            Collagelightbox.style.display = "flex";
+            CollagelightboxImage.src = Collageimages[index];
+            }
+            
+            function closeCollageLightbox() {
+            Collagelightbox.style.display = "none";
+            }
+            
+            function changeCollageImage(stepp) {
+            currentCollageImageIndex += stepp;
+            if (currentCollageImageIndex < 0) {
+                currentCollageImageIndex = Collageimages.length - 1;
+            } else if (currentCollageImageIndex >= Collageimages.length) {
+                currentCollageImageIndex = 0;
+            }
+            CollagelightboxImage.src = Collageimages[currentCollageImageIndex];
+            }
+            </script>
     </div>
 
 
@@ -548,12 +625,12 @@ header .menu-icon {
         </div>
         
         <div class="c">
-        <p class="cc">SITE MAPA</p>
-        <a href="frontpage.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Početna</button></a>
-        <a href="proizvodi.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Proizvodi</button></a>
-        <a href="reference.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Reference</button></a>
-        <a href="kontakt.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Kontakt</button></a>
-        </div>
+            <p class="cc">SITE MAPA</p>
+            <a href="index.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Početna</button></a>
+            <a href="proizvodi.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Proizvodi</button></a>
+            <a href="reference.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Reference</button></a>
+            <a href="kontakt.html"><button class="ccc"><i class="bi bi-arrow-right"></i> Kontakt</button></a>
+            </div>
         
         <div class="column d">
             <p class="dd">GALERIJA</p>
