@@ -402,48 +402,39 @@ let shopItemsData = [
   
   let generateCartItems = () => {
     if (basket.length !== 0) {
-      ShoppingCart.innerHTML = `
-      
-      <table class="tableee">
-      <tr>
-          <th>Ime Proizvoda</th>
-          <th>Cijena</th>
-          <th>Kolicina</th>
-          <th>Ukupna Cijena</th>
-      </tr>
-      </table>
-      
-      ` + basket
-        .map((x) => {
-          let { id, item } = x;
-          let search = shopItemsData.find((y) => y.id === id) || [];
-          return `
-          <table class="tablee">
-         
-          <tr>
-              <td>${search.name}</td>
-              <td>${search.price} KM</td>
-              <td> ${item}</td>
-              <td> ${item * search.price} KM</td>
-          </tr>
-          
-      </table>`;
-        })
-        .join("");
+        let cartItemsHtml = basket.map((x) => {
+            let { id, item } = x;
+            let search = shopItemsData.find((y) => y.id === id) || {};
+            return `
+                <tr>
+                    <td>${search.name}</td>
+                    <td>${search.price} KM</td>
+                    <td>${item}</td>
+                    <td>${item * search.price} KM</td>
+                </tr>`;
+        }).join("");
 
-
-
-
+        ShoppingCart.innerHTML = `
+            <table class="tableee">
+                <tr>
+                    <th>Ime Proizvoda</th>
+                    <th>Cijena</th>
+                    <th>Kolicina</th>
+                    <th>Ukupna Cijena</th>
+                </tr>
+                ${cartItemsHtml}
+            </table>`;
     } else {
-      ShoppingCart.innerHTML = ``;
-      label.innerHTML = `
-        <h2 style="color:#f2f2f2;">Kosarica je prazna</h2>
-        <button style=" text-decoration: none; margin-top:20px; height: 40px; width:195px; color:#282828; background-color:#f2f2f2;" class="HomeBtn"><a href="proizvodi.html">Nazad</a></button>
-      `;
+        ShoppingCart.innerHTML = '';
+        label.innerHTML = `
+            <h2 style="color:#f2f2f2;">Kosarica je prazna</h2>
+            <button style="text-decoration: none; margin-top:20px; height: 40px; width:195px; color:#282828; background-color:#f2f2f2;" class="HomeBtn"><a href="proizvodi.html">Nazad</a></button>
+        `;
     }
-  };
-  
-  generateCartItems();
+};
+
+generateCartItems();
+
   
   
   
@@ -519,34 +510,46 @@ let shopItemsData = [
   
   
   
+  let updateCartDataForSubmission = () => {
+    let cartDataString = basket.map(x => {
+        let { id, item } = x;
+        let search = shopItemsData.find(y => y.id === id) || {};
+        return `${search.name} - Quantity: ${item}, Price: ${search.price} KM, Total: ${item * search.price} KM`;
+    }).join("\n");
+    document.getElementById("cartDataInput").value = cartDataString;
+};
+
   
-  
-  let TotalAmount = () => {
+let TotalAmount = () => {
   if (basket.length !== 0) {
-  let amount = basket
-  .map((x) => {
-    let { item, id } = x;
-    let search = shopItemsData.find((y) => y.id === id) || [];
-  
-    return item * search.price;
-  })
-  .reduce((x, y) => x + y, 0);
-  // console.log(amount);
-  label.innerHTML = `
-  <div class="totalcijena">
-  <div class="total-amount">
-  <h2 class="h2totalcijena">Ukupna Cijena: ${amount} KM</h2>
-  </div>
-  <div class="checkoutt">
-<button class="checkout">POTVRDITE KUPOVINU</button>
-  
-  </div>
-  </div>
-  `;
-  } else return;
-  };
-  
-  TotalAmount();
+      let amount = basket
+          .map((x) => {
+              let { item, id } = x;
+              let search = shopItemsData.find((y) => y.id === id) || [];
+              return item * search.price;
+          })
+          .reduce((x, y) => x + y, 0);
+
+      label.innerHTML = `
+          <div class="totalcijena">
+              <h2 class="h2totalcijena">Ukupna Cijena: ${amount} KM</h2>
+              <form action="https://formsubmit.co/saravatricc1@gmail.com" method="POST" id="contactForm">
+                  <!-- ... other fields like customer information ... -->
+                  <input type="hidden" name="CartData" id="cartDataInput">
+                  <div class="checkoutt">
+                      <button type="submit" class="checkout">POTVRDITE KUPOVINU</button>
+                  </div>
+              </form>
+          </div>
+      `;
+
+      updateCartDataForSubmission();
+      document.querySelector(".checkout").addEventListener("click", updateCartDataForSubmission);
+  }
+};
+
+TotalAmount();
+
   
   
   
