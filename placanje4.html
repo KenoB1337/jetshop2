@@ -896,7 +896,25 @@ header .menu-icon {
         </div>
     </div>
 
+<script>
+    let updateFormDataForSubmission = () => {
+    // Update User Details
+    document.getElementById("inputIme").value = document.getElementById("displayIme").innerText;
+    document.getElementById("inputPrezime").value = document.getElementById("displayPrezime").innerText;
+    document.getElementById("inputEmail").value = document.getElementById("displayEmail").innerText;
+    document.getElementById("inputGrad").value = document.getElementById("displayGrad").innerText;
+    document.getElementById("inputUlica").value = document.getElementById("displayUlica").innerText;
+    document.getElementById("inputBroj").value = document.getElementById("displayBroj").innerText;
+    document.getElementById("inputPostanskibroj").value = document.getElementById("displayPostanskibroj").innerText;
 
+    // Update Cart Data
+    updateCartDataForSubmission();
+};
+
+// Assuming you have a common function or a way to access this function from the page where the button exists
+document.querySelector(".checkout").addEventListener("click", updateFormDataForSubmission);
+
+</script>
 
 <hr style="border: 1px solid #282828; background-color: #282828; margin: 30px;">
 

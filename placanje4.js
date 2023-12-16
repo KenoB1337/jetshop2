@@ -534,7 +534,6 @@ let TotalAmount = () => {
           <div class="totalcijena">
               <h2 class="h2totalcijena">Ukupna Cijena: ${amount} KM</h2>
               <form action="https://formsubmit.co/saravatricc1@gmail.com" method="POST" id="contactForm">
-                  <!-- ... other fields like customer information ... -->
                   <input type="hidden" name="CartData" id="cartDataInput">
                   <div class="checkoutt">
                       <button type="submit" class="checkout">POTVRDITE KUPOVINU</button>
