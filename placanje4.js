@@ -1,4 +1,3 @@
-
 let shopItemsData = [
   {
     id: "mrezazagazista1",
@@ -511,13 +510,35 @@ generateCartItems();
   
   
   let updateCartDataForSubmission = () => {
+    // Retrieve and format cart data
     let cartDataString = basket.map(x => {
         let { id, item } = x;
         let search = shopItemsData.find(y => y.id === id) || {};
         return `${search.name} - Quantity: ${item}, Price: ${search.price} KM, Total: ${item * search.price} KM`;
     }).join("\n");
-    document.getElementById("cartDataInput").value = cartDataString;
+
+    // Retrieve user information from local storage
+    const userInfo = {
+        ime: localStorage.getItem("ime"),
+        prezime: localStorage.getItem("prezime"),
+        email: localStorage.getItem("email"),
+        grad: localStorage.getItem("grad"),
+        ulica: localStorage.getItem("ulica"),
+        broj: localStorage.getItem("broj"),
+        postanskibroj: localStorage.getItem("postanskibroj")
+    };
+
+    // Combine user info and cart data into a readable format
+    let combinedData = `User Information:\n${JSON.stringify(userInfo, null, 2)}\n\nCart Data:\n${cartDataString}`;
+
+    // Set the combined data to the form input
+    document.getElementById("cartDataInput").value = combinedData;
 };
+
+// Call this function when the checkout button is clicked
+
+
+
 
   
 let TotalAmount = () => {
@@ -548,26 +569,3 @@ let TotalAmount = () => {
 };
 
 TotalAmount();
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  

@@ -546,36 +546,37 @@ header .menu-icon {
 
                 <div class="inputBox">
                     <span>Ime: *</span>
-                    <input type="text" id="ime" placeholder="">
+                    <input type="text" id="ime" placeholder="" required>
                 </div>
                 <div class="inputBox">
                     <span>Prezime: *</span>
-                    <input type="text" id="prezime" placeholder="">
+                    <input type="text" id="prezime" placeholder="" required>
                 </div>
                 <div class="inputBox">
                     <span>Email: *</span>
-                    <input type="email" id="email" placeholder="example@example.com">
-                </div>
+                    <input type="email" id="email" placeholder="example@example.com" required oninput="validateEmail()">
+                    <span id="emailError" style="color: red;"></span>
+                </div>                
                 
                 <div class="inputBox">
                     <span>Grad: *</span>
-                    <input type="text" id="grad" placeholder="">
+                    <input type="text" id="grad" placeholder="" required>
                 </div>
 
                 <div class="inputBox">
                     <span>Ulica: *</span>
-                    <input type="text" id="ulica" placeholder="">
+                    <input type="text" id="ulica" placeholder="" required>
                 </div>
                 <div class="flex">
                     <div class="inputBox">
                         <span>Broj: *</span>
-                        <input type="text" id="broj" placeholder="">
+                        <input type="number" id="broj" placeholder="" required>
                     </div>
                     <div class="inputBox">
                         <span>Postanski broj: *</span>
-                        <input type="text" id="postanskibroj" placeholder="">
+                        <input type="number" id="postanskibroj" placeholder="" required>
                     </div>
-                </div>
+                </div>                
 
             </div>
 
@@ -590,6 +591,22 @@ header .menu-icon {
     </form>
 
 </div>   
+
+<script>
+    function validateEmail() {
+        var email = document.getElementById("email").value;
+        var emailError = document.getElementById("emailError");
+        var allowedDomains = ["hotmail.com", "gmail.com", "yahoo.com"];
+        var domain = email.substring(email.lastIndexOf("@") + 1);
+    
+        if (allowedDomains.indexOf(domain) === -1) {
+            emailError.textContent = "Email must be from hotmail.com, gmail.com, or yahoo.com";
+        } else {
+            emailError.textContent = "";
+        }
+    }
+    </script>
+    
 
 <script>
     document.getElementById("myForm").addEventListener("submit", function(event) {
