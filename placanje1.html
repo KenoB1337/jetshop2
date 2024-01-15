@@ -170,6 +170,8 @@ header .menu-icon {
 
 }
 }
+
+
 @media (max-width: 450px) {
         .korpa {
             font-size:28px;
@@ -177,18 +179,12 @@ header .menu-icon {
         .menu-icon{
             font-size: 20px;
         }
+        .cartAmount{
+            top: 35px;
+            right: 38px;
+            
+        }
     }
-@media screen and (max-width: 350px) {
-    .cartAmount{
-        font-size: 9px;
-        top: -5px;
-        right: -7px;
-    }
-    .logo img {
-        max-width: 80%;
-        padding-left:0;
-}
-}
           
  
            .progress-container {
@@ -527,8 +523,6 @@ header .menu-icon {
         <a href=""><div class="step">2</div></a>
         <div class="connector"></div>
         <a href=""><div class="step">3</div></a>
-        <div class="connector"></div>
-        <a href=""><div class="step">4</div></a>
     </div>
 </div>
 
@@ -564,17 +558,17 @@ header .menu-icon {
                 </div>
 
                 <div class="inputBox">
-                    <span>Ulica: *</span>
+                    <span>Ulica i broj: *</span>
                     <input type="text" id="ulica" placeholder="" required>
                 </div>
                 <div class="flex">
                     <div class="inputBox">
-                        <span>Broj: *</span>
-                        <input type="number" id="broj" placeholder="" required>
+                        <span>Kontakt telefon: *</span>
+                        <input type="text" id="broj" placeholder="" required>
                     </div>
                     <div class="inputBox">
                         <span>Postanski broj: *</span>
-                        <input type="number" id="postanskibroj" placeholder="" required>
+                        <input type="text" id="postanskibroj" placeholder="" required>
                     </div>
                 </div>                
 
@@ -596,11 +590,11 @@ header .menu-icon {
     function validateEmail() {
         var email = document.getElementById("email").value;
         var emailError = document.getElementById("emailError");
-        var allowedDomains = ["hotmail.com", "gmail.com", "yahoo.com"];
+        var allowedDomains = ["hotmail.com", "gmail.com", "yahoo.com", "outlook.com", "icloud.com"];
         var domain = email.substring(email.lastIndexOf("@") + 1);
     
         if (allowedDomains.indexOf(domain) === -1) {
-            emailError.textContent = "Email must be from hotmail.com, gmail.com, or yahoo.com";
+            emailError.textContent = "Molimo unesite validnu Email adresa";
         } else {
             emailError.textContent = "";
         }

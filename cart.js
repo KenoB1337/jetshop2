@@ -538,9 +538,9 @@ label.innerHTML = `
 <h2 class="h2totalcijena">Ukupna Cijena: ${amount} KM</h2>
 </div>
 <div class="checkoutt">
-<a href="placanje1.html"><button class="checkout">Checkout</button></a>
-<button onclick="clearCart()" class="removeAll">Clear Cart</button>
-<a href="proizvodi.html"><button class="shopmore">Shop More</button></a>
+<a href="placanje1.html"><button class="checkout">Kupite</button></a>
+<button onclick="clearCart()" class="removeAll">Ispraznite Korpu</button>
+<a href="proizvodi.html"><button class="shopmore">Nastavite s kupovinom</button></a>
 
 </div>
 </div>

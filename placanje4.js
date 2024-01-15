@@ -543,7 +543,7 @@ generateCartItems();
   
 let TotalAmount = () => {
   if (basket.length !== 0) {
-      let amount = basket
+      let baseAmount = basket
           .map((x) => {
               let { item, id } = x;
               let search = shopItemsData.find((y) => y.id === id) || [];
@@ -551,21 +551,55 @@ let TotalAmount = () => {
           })
           .reduce((x, y) => x + y, 0);
 
-      label.innerHTML = `
-          <div class="totalcijena">
-              <h2 class="h2totalcijena">Ukupna Cijena: ${amount} KM</h2>
-              <form action="https://formsubmit.co/saravatricc1@gmail.com" method="POST" id="contactForm">
-                  <input type="hidden" name="CartData" id="cartDataInput">
-                  <div class="checkoutt">
-                      <button type="submit" class="checkout">POTVRDITE KUPOVINU</button>
-                  </div>
-              </form>
-          </div>
-      `;
+      let surcharge = 10;
+      let amount = baseAmount;
 
-      updateCartDataForSubmission();
-      document.querySelector(".checkout").addEventListener("click", updateCartDataForSubmission);
-  }
+      // Function to update the total amount based on selection
+      function updateTotalAmount() {
+          let selectedOption = document.querySelector('input[name="option"]:checked').value;
+          amount = selectedOption === "option1" ? baseAmount + surcharge : baseAmount;
+          document.querySelector(".h2totalcijena").textContent = `Ukupna Cijena: ${amount} KM`;
+      }
+
+        label.innerHTML = `
+            <div class="totalcijena">
+                <h2 class="h2totalcijena">Ukupna Cijena: ${amount} KM</h2>
+                <form action="https://formsubmit.co/saravatricc1@gmail.com" method="POST" id="contactForm">
+
+                <h2 style="color: white; margin-top: 50px;">Molimo odaberite nacin isporuke:</h2>
+
+                <input type="hidden" name="CartData" id="cartDataInput">
+
+                <div style="margin-top: 10px; margin-bottom: 10px;">
+                    <input type="radio" name="option" value="option1" id="option1">
+                    <label for="option1" style="color: white;">LegerMax +10 KM</label>
+                </div>
+                <div style="margin-bottom: 30px;">
+                    <input type="radio" name="option" value="option2" id="option2" >
+                    <label for="option2" style="color: white;">Preuzece u Junior Eko Termik (besplatno)</label>
+                </div>
+
+                    <div class="checkoutt">
+                        <button type="submit" class="checkout">POTVRDITE KUPOVINU</button>
+                    </div>
+                </form>
+            </div>
+        `;
+
+        document.getElementById("option1").addEventListener("change", updateTotalAmount);
+        document.getElementById("option2").addEventListener("change", updateTotalAmount);
+
+        document.querySelectorAll('input[name="option"]').forEach(radio => {
+          radio.addEventListener("change", () => {
+              document.querySelector(".checkout").disabled = false;
+          });
+      });
+
+        updateCartDataForSubmission();
+        document.querySelector(".checkout").addEventListener("click", updateCartDataForSubmission);
+    }
 };
 
 TotalAmount();
+
+

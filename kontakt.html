@@ -166,6 +166,11 @@ header .menu-icon {
         .menu-icon{
             font-size: 20px;
         }
+        .cartAmount{
+            top: 35px;
+            right: 38px;
+            
+        }
     }
 
 
@@ -667,14 +672,15 @@ header .menu-icon {
         const contactForm = document.getElementById("contactForm");
 
         emailInput.oninput = function () {
-            if (!this.value.match(/[a-zA-Z0-9._%+-]+@(hotmail\.com|gmail\.com)/)) {
-                emailError.textContent = "Molimo unesite validnu Email adresa";
-                submitButton.disabled = true;
-            } else {
-                emailError.textContent = "";
-                submitButton.disabled = false;
-            }
-        };
+    if (!this.value.match(/[a-zA-Z0-9._%+-]+@(hotmail\.com|gmail\.com|yahoo\.com|outlook\.com|icloud\.com)/)) {
+        emailError.textContent = "Molimo unesite validnu Email adresa";
+        submitButton.disabled = true;
+    } else {
+        emailError.textContent = "";
+        submitButton.disabled = false;
+    }
+};
+
 
         contactForm.onsubmit = function (event) {
             if (!emailInput.checkValidity()) {

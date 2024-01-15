@@ -169,15 +169,20 @@ header .menu-icon {
         .menu-icon{
             font-size: 20px;
         }
+        .cartAmount{
+            top: 35px;
+            right: 38px;
+            
+        }
     }
 
-.progress-container {
+    .progress-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 400px;
             margin: 20px auto;
-            margin-bottom: 50px;
+            text-decoration: none;
         }
         .step {
             width: 40px;
@@ -188,18 +193,21 @@ header .menu-icon {
             justify-content: center;
             align-items: center;
             background-color: white;
+            text-decoration: none;
         }
 
       
         .active {
             background-color: #1674D1; 
             color: white; 
+            text-decoration: none;
         }
 
         .connector {
             width: 50px;
             height: 3px;
             background-color: #1674D1; 
+            text-decoration: none;
         }
 
 
@@ -268,6 +276,7 @@ header .menu-icon {
     background-color: #f2f2f2;
     height: 60px;
     width: 580px;
+    margin-top: 25px;
   }
   @media (max-width: 680px) {
 
@@ -470,7 +479,9 @@ header .menu-icon {
         #next {
             right: 10px;
         }
-
+        .progress-container a {
+        text-decoration: none;
+    }
 
         .image{
             flex: 1;
@@ -858,9 +869,7 @@ header .menu-icon {
         <div class="connector"></div>
         <a href="placanje2.html"><div class="step active">2</div></a>
         <div class="connector"></div>
-        <a href="placanje3.html"><div class="step active">3</div></a>
-        <div class="connector"></div>
-        <a href="placanje4.html"><div class="step active">4</div></a>
+        <a href="placanje4.html"><div class="step active">3</div></a>
     </div>
 </div>
 
@@ -933,6 +942,7 @@ header .menu-icon {
     <div class="right-column">
       <div id="label" class="text-center"></div>
       <div id="TotalAmount"></div>
+     
     </div>
   </div>
 

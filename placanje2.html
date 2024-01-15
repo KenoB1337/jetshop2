@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JET - Junior Eko Termik</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>JET - Junior Eko Termik</title>
     
     
 
@@ -175,6 +175,11 @@ header .menu-icon {
         }
         .menu-icon{
             font-size: 20px;
+        }
+        .cartAmount{
+            top: 35px;
+            right: 38px;
+            
         }
     }
 
@@ -475,12 +480,12 @@ header .menu-icon {
   .progress-container a {
         text-decoration: none;
     }
+       
     @media (max-width: 550px) {
     .progress-container{
         width: 300px ;
     }
 }
-        
     </style>
 
 </head>
@@ -543,8 +548,6 @@ header .menu-icon {
         <a href="placanje2.html"><div class="step active">2</div></a>
         <div class="connector"></div>
         <a href=""><div class="step">3</div></a>
-        <div class="connector"></div>
-        <a href=""><div class="step">4</div></a>
     </div>
 </div>
 
@@ -552,26 +555,22 @@ header .menu-icon {
 
 <div class="container">
 
-    <form action="placanje3.html">
+    <form action="placanje4.html" id="paymentForm">
 
         <div class="row">
 
             <div class="col">
 
-                <h3 style="margin-bottom: 30px;" class="title">Isporuka: </h3>
+                <h3 style="margin-bottom: 30px;" class="title">Placanje: </h3>
 
-                <h4 style="margin-bottom: 45px;">Odaberite vrstu isporuke:</h4>
+                <h4 style="margin-bottom: 45px;">Vrsta placanja:</h4>
 
-                <div style="margin-bottom: 60px;" class="options">
+                <div style="margin-bottom: 40px;" class="options">
                     <label style="margin-bottom: 30px;" class="option-label">
                       <input  type="radio" name="option" value="Option 1">
-                      <span  class="dot"></span> Preuzece u Junior Eko Termik (besplatno)
+                      <span  class="dot"></span> Gotovina
                     </label>
                     
-                    <label class="option-label">
-                      <input type="radio" name="option" value="Option 2">
-                      <span class="dot"></span> LegerMax + 10KM
-                    </label>
                   </div>
 
             </div>
@@ -579,13 +578,49 @@ header .menu-icon {
         </div>
 
         
-        <a href="placanje2.html"><button type="submit" value="Nastavite" class="submit-btn">Nastavite</button></a>
+        <a href="placanje2.html"><button type="submit" value="Nastavite" class="submit-btn"  id="continueButton" disabled>Nastavite</button></a>
        
         
 
     </form>
 
 </div>   
+
+<script>
+    document.getElementById('paymentForm').addEventListener('change', function() {
+        var options = document.getElementsByName('option');
+        var button = document.getElementById('continueButton');
+        
+        var isOptionSelected = false;
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                isOptionSelected = true;
+                break;
+            }
+        }
+
+        button.disabled = !isOptionSelected;
+    });
+
+    document.getElementById('continueButton').addEventListener('click', function() {
+        var form = document.getElementById('paymentForm');
+        var options = document.getElementsByName('option');
+        
+        var isOptionSelected = false;
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                isOptionSelected = true;
+                break;
+            }
+        }
+
+        if (isOptionSelected) {
+            form.submit();
+        } else {
+            alert("Please select a payment option.");
+        }
+    });
+</script>
 
 <footer class="footer">
     <div class="aa">
